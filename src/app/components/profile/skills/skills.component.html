@@ -1,0 +1,56 @@
+<div class="skillWrap">
+  <div class="skillName">Programs</div>
+  <div class="skillLine P">
+    <div class="programs" *ngFor="let programs of info.programs">
+      <div class="boxProgram&Web">
+        <div class="logoProgram&Web" [ngStyle]="{'background-image':'url('+programs.icon+')'}"></div>
+        <!--        <div class="logoName">{{programs.name}}</div>-->
+      </div>
+    </div>
+  </div>
+  <div class="skillName">Web</div>
+  <div class="skillLine W">
+    <div class="web" *ngFor="let web of info.web">
+      <div class="logoProgram&Web" [ngStyle]="{'background-image':'url('+web.icon+')'}"></div>
+      <!--        <div class="logoName">{{web.name}}</div>-->
+    </div>
+  </div>
+  <div class="skillName">Responsibilities</div>
+  <div class="skillLine R" id="response">
+    <div class="responsibilities" *ngFor="let responsibilities of info.responsibilities">
+      {{responsibilities}}
+    </div>
+  </div>
+  <div class="skillName">Knowledge of machines</div>
+  <div class="skillLine M">
+    <div class="machines" *ngFor="let machines of info.machines">
+      <div class="machineInfo" (click)="viewInfo(machines.id)">{{machines.model}}</div>
+    </div>
+  </div>
+  <div class="machineInfo">
+    <ng-container [ngSwitch]="i640">
+      <app-i640 class="machineInfoWrap"
+                *ngSwitchCase="'visible'"
+                (click)="invisible()"
+      ></app-i640>
+    </ng-container>
+    <ng-container [ngSwitch]="g540">
+      <app-gr540 class="machineInfoWrap"
+                *ngSwitchCase="'visible'"
+                (click)="invisible()"
+      ></app-gr540>
+    </ng-container>
+    <ng-container [ngSwitch]="x2000">
+      <app-x2000 class="machineInfoWrap"
+                *ngSwitchCase="'visible'"
+                (click)="invisible()"
+      ></app-x2000>
+    </ng-container>
+    <ng-container [ngSwitch]="jw">
+      <app-jw class="machineInfoWrap"
+                *ngSwitchCase="'visible'"
+                (click)="invisible()"
+      ></app-jw>
+    </ng-container>
+  </div>
+</div>

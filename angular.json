@@ -144,6 +144,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "ViktorProfile"
+    }
+  },
+  "defaultProject": "ViktorProfile",
+  "cli": {
+    "analytics": false
+  }
 }

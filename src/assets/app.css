@@ -1,0 +1,633 @@
+@keyframes example {
+  0%   {left:-100%; top:0px;}
+  100% {left:0%; top:0px;}
+}
+@keyframes example1 {
+  0%   {left:+100%; top:0px;}
+  100% {left:0%; top:0px;}
+}
+@keyframes example2{
+  0%   {left:0%; top:-100%;}
+  100% {left:0%; top:0%;}
+}
+@keyframes example3{
+  0%   {left:0%; top:0%;}
+  12.5%  {left:-1%; top:1%;}
+  25%  {left:-2%; top:0%;}
+  37.5%  {left:-1%; top:-1%;}
+  50% {left:0%; top:0%;}
+  62.5% {left:1%; top:1%;}
+  75% {left:2%; top:0%;}
+  87.5% {left:1%; top:-1%;}
+  50% {left:0%; top:0%;}
+}
+@keyframes example4{
+  0%   {left:0%; top:0%;}
+  12.5%  {left:1%; top:1%;}
+  25%  {left:2%; top:0%;}
+  37.5%  {left:1%; top:-1%;}
+  50% {left:0%; top:0%;}
+  62.5% {left:-1%; top:1%;}
+  75% {left:-2%; top:0%;}
+  87.5% {left:-1%; top:-1%;}
+  50% {left:0%; top:0%;}
+}
+@keyframes example5{
+  0%  {transform: scale(0)}
+  100% {transform: scale(1)}
+}
+
+@keyframes example6 {
+  0%   {left:0%; top:+100%;}
+  100% {left:0%; top:0%}
+}
+@keyframes example7 {
+  0%   {left:0%; top:+200%;}
+  100% {left:0%; top:95%}
+}
+
+
+html, body {
+  margin: 0;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  font-family: 'Orbitron', sans-serif;
+  overflow: hidden;
+}
+
+ app-layout {
+  margin: 0;
+  display: flex;
+  padding: 0;
+  height: 100%;
+  background: linear-gradient(black, #5c017c 50%);
+  box-sizing: border-box;
+  box-shadow: inset 0px 0px 343px 0px black;
+  /* font-family: 'Orbitron', sans-serif; */
+  letter-spacing: 1px;
+  font-size: 0.9em;
+}
+
+
+.sideMenu {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    height: 100%;
+    background-color: #80808033;
+    justify-content: flex-start;
+    position: relative;
+    animation-name: example;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.content {
+    display: flex;
+    flex-direction: row;
+    flex: 5;
+}
+
+.main {
+    display: flex;
+    flex: 1;
+    flex-direction: row;
+}
+
+.navigateButtons {
+    display: flex;
+    flex-direction: column;
+    height: 16%;
+    /* background-color: beige; */
+    justify-content: space-around;
+    margin: 40px 0 0 0;
+}
+
+.sideMenuButton {
+    width: 80%;
+    margin: 0 0 0px 0px;
+    height: 31%;
+    box-shadow: 1px 7px 16px 4px #00000047;
+    border-radius: 0px 10px 10px 0px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #62167d;
+    cursor: pointer;
+    position: relative;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-fill-mode: forwards;
+    transition: all 0.1s ease-out;
+}
+
+app-profile {
+    /* background: antiquewhite; */
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}
+
+router-outlet {}
+
+.mainIcon {
+    /* background-color: aliceblue; */
+    display: flex;
+    flex-direction: row;
+    /* flex: 1; */
+    justify-content: flex-end;
+    height: 9%;
+}
+
+.mainIconContainer {
+    background-color: aliceblue;
+    display: flex;
+    width: 30%;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 53px 0px 0px;
+    background: #521368;
+    border-radius: 0 0 27px 27px;
+    position: relative;
+    animation-name: example2;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.dataContainer {
+    display: flex;
+    flex-direction: row;
+    /* flex: 1; */
+    justify-content: space-around;
+    align-items: center;
+    /* background: aquamarine; */
+    height: 20%;
+}
+
+.profileBox {
+    display: flex;
+    flex-direction: column;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.contentWrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-between;
+    margin: 0 2% 2.2% 2%;
+}
+
+.contentIcon {
+    /* background: aqua; */
+    width: 15%;
+    height: 84%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+app-traits {}
+
+.infoWrap,.educationWrap,.skillWrap, .traitsWrap {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: space-evenly;
+    font-size: 2em;
+    position: relative;
+    animation-name: example6;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: default;
+}
+
+.infoLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+    height: 11%;
+    align-items: center;
+}
+
+.infoBox {
+    display: flex;
+    flex: 1;
+    width: 100%;
+}
+
+.infoName {
+    display: flex;
+    background: #80808029;
+    width: 27%;
+    height: 100%;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 16px;
+    color: #3a014e;
+    box-shadow: 1px 7px 16px 4px #00000047;
+    cursor: default;
+}
+
+.infoContent {
+    display: flex;
+    width: 40%;
+}
+
+
+.educationContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30%;
+    height: 100%;
+    /* background: aliceblue; */
+}
+
+.educationLine {
+    display: flex;
+    flex-direction: row;
+    justify-content: inherit;
+    height: 25%;
+}
+
+.educationBoxContent {
+    background: #8080804a;
+    display: flex;
+    width: 100%;
+    height: 60%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    color: #400156;
+    font-size: 0.8em;
+    box-shadow: 1px 7px 16px 4px #00000047;
+}
+
+
+.educationBoxName {
+    font-size: 0.8em;
+}
+
+
+.skillLineP {
+    display: flex;
+}
+
+.programs {}
+
+.skillLine {
+    display: flex;
+    flex-direction: row;
+    /* border: 1px dotted; */
+    height: 20%;
+    justify-content: inherit;
+    align-items: center;
+}
+
+.R {
+
+  overflow-y: scroll;
+    flex-wrap: wrap;
+
+}
+/*.R::-webkit-scrollbar-thumb {*/
+/*  background-color: #356184;*/
+/*  background-image: -webkit-gradient(linear, 0 0, 0 100%,*/
+/*  color-stop(.5, rgba(255, 255, 255, .25)),*/
+/*  color-stop(.5, transparent), to(transparent));*/
+/*}*/
+
+.R::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f9f9fd00;
+}
+
+.R::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background-color: #4b1c5c;
+}
+
+.R::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.2);
+  border-radius: 10px;
+  background-color: #f9f9fd00;
+}
+
+.responsibilities {
+    background: #80808036;
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    font-size: 0.4em;
+    text-align: center;
+    border-radius: 10px;
+    width: 16%;
+    height: 79%;
+    /* font-weight: bold; */
+    color: #9a46b9;
+    box-shadow: 1px 7px 16px 4px #00000047;
+    text-shadow: 0px 0px 11px #000000;
+}
+
+.machines {
+    display: flex;
+    text-align: center;
+    text-align-last: auto;
+    background: #80808036;
+    margin: 10px;
+    font-size: 0.6em;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 61%;
+    cursor: pointer;
+    color: #9a46b9;
+    box-shadow: 1px 7px 16px 4px #00000047;
+    text-shadow: 0px 0px 11px #000000;
+    word-spacing: 2px;
+    transition: all 0.1s ease-out;
+}
+
+.skillName {
+    font-size: 0.5em;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+.traitsLine {
+    display: flex;
+    justify-content: center;
+    height: 10%;
+}
+
+
+.traitsContent {
+    background: #80808021;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 19px;
+    color: #1f012a;
+    font-size: 0.6em;
+    box-shadow: 1px 7px 16px 4px #00000047;
+}
+
+pre.mySpeech {
+    font-size: 70%;
+}
+
+.mySpeech {text-indent: 62px;text-align: justify;font-size: 0.8em;width: 90%;display: flex;word-spacing: 8px;line-height: 29px;color: #1f012a;}
+
+.traitsContainer {
+    flex-direction: row;
+}
+
+.speechContainer {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.traitsLineContainer {display: flex;flex-direction: column;justify-content: space-around;flex: 1;}
+
+
+
+
+.logoProgram\&Web {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+
+.logoName {
+    font-size: 0.6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.iconProfileBack {
+   width: 116px;
+   height: 116px;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+   cursor: pointer;
+   transition: all 0.1s ease-out;
+}
+.iconProfileFace {
+   width: 109px;
+   height: 109px;
+   display: flex;
+   background-repeat: no-repeat;
+   background-size: 100%;
+   /* position: absolute; */
+   margin: 0px 0 28px 0px;
+   cursor: pointer;
+   position: relative;
+   animation-fill-mode: forwards;
+   animation-iteration-count: infinite;
+   transition: all 0.1s ease-out;
+}
+
+.boxProgram\&Web {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.textIcon {
+    display: flex;
+    margin: 0px 0 9px 0;
+    font-weight: bold;
+    color: #5a017a;
+    font-size: 1.5em;
+    text-shadow: 0px 5px 19px black;
+}
+
+div#response {
+    box-shadow: 1px 7px 16px 4px #00000047 inset;
+    border-radius: 21px;
+    background: #232323;
+}
+
+head {}
+
+.textFolder {
+    font-size: 3em;
+}
+
+
+.info {position: relative;animation-name: example1;animation-duration: 1s;animation-fill-mode: forwards;}
+
+
+.education {
+    position: relative;
+    animation-name: example1;
+    animation-duration: 1.2s;
+    animation-fill-mode: forwards;
+}
+
+.contentIcon.experience {
+    position: relative;
+    animation-name: example1;
+    animation-duration: 1.4s;
+    animation-fill-mode: forwards;
+}
+
+.contentIcon.skills {
+    position: relative;
+    animation-name: example1;
+    animation-duration: 1.6s;
+    animation-fill-mode: forwards;
+}
+
+.contentIcon.traits {
+    position: relative;
+    animation-name: example1;
+    animation-duration: 1.8s;
+    animation-fill-mode: forwards;
+}
+
+
+.iconProfileFace {
+}
+
+.iconInfo {
+    animation-duration: 3s;
+    animation-name: example3;
+}
+
+
+.iconEducation {
+    animation-duration: 4s;
+    animation-name: example3;
+}
+
+.iconProfileFace.iconSkill {
+    animation-duration: 4s;
+    animation-name: example3;
+}
+
+.iconProfileFace.iconExperience {
+    animation-duration: 2s;
+    animation-name: example3;
+}
+
+.iconProfileFace.iconTraits {
+    animation-duration: 3s;
+    animation-name: example3;
+}
+
+.iconProfileBack:hover {
+    transform: scale(1.1);
+    /* box-shadow: 0px 4px 7px 0px black, inset 0px 0px 19px 0px #000000ad; */
+}
+
+.iconProfileFace:hover {
+    transform: scale(1.3);
+}
+
+.sideMenuButton:hover {
+    transform: scale(1.1);
+    box-shadow: -8px 8px 13px 0px #00000047;
+}
+
+.sideMenuButton.profileButton {}
+
+.machines:hover {
+    transform: scale(1.1);
+    box-shadow: 1px 9px 20px 4px #00000047;
+}
+
+p {}
+
+.machineInfoWrap {
+    background: #46015d;
+    /* border: 1px dotted red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: -445px 0px 0px 0px;
+    border-radius: 20px;
+    box-shadow: 1px 7px 16px 4px #00000047;
+    animation-name: example7;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    cursor: pointer;
+}
+
+
+.machineWrap {
+    display: flex;
+    /* background: aliceblue; */
+    width: 96%;
+    height: 91%;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.imageMachine {
+    width: 100%;
+    height: 99%;
+    display: flex;
+    background-repeat: no-repeat;
+    background-size: 86%;
+    justify-content: center;
+    /* border: 1px dotted red; */
+    align-items: center;
+    background-position: center;
+}
+
+.machineCharacteristic {
+    display: flex;
+    /* flex: 1; */
+    width: 45%;
+    height: 90%;
+    background: aqua;
+}
+
+.imageMachineContainer {
+    display: flex;
+    width: 67%;
+    height: 98%;
+    /* background: antiquewhite; */
+    justify-content: center;
+    align-items: center;
+}
+
+
+app-portfolio {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+}

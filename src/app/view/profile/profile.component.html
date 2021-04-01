@@ -1,0 +1,79 @@
+<div class="contentWrap">
+  <div class="mainIcon">
+    <div class="mainIconContainer">
+      <div class="textFolder">Profile</div>
+    </div>
+  </div>
+  <div class="dataContainer">
+    <div class="contentIcon info">
+      <div class="iconProfileBack" [ngStyle]="{'background-image':'url('+iconBack+')'}"
+           (click)="viewInfo()">
+        <div class="iconProfileFace iconInfo" [ngStyle]="{'background-image':'url('+iconInfo+')'}"
+             (click)="viewInfo()">
+        </div>
+      </div>
+      <div class="textIcon">info</div>
+    </div>
+    <div class="contentIcon education" (click)="viewEducation()">
+      <div class="iconProfileBack" [ngStyle]="{'background-image':'url('+iconBack+')'}"
+           (click)="viewEducation()">
+        <div class="iconProfileFace iconEducation" [ngStyle]="{'background-image':'url('+iconEducation+')'}"
+             (click)="viewEducation()">
+        </div>
+      </div>
+      <div class="textIcon">education</div>
+    </div>
+    <div class="contentIcon experience">
+      <div class="iconProfileBack" [ngStyle]="{'background-image':'url('+iconBack+')'}"
+           (click)="viewExperience()">
+        <div class="iconProfileFace iconExperience" [ngStyle]="{'background-image':'url('+iconExperience+')'}"
+             (click)="viewExperience()">
+        </div>
+      </div>
+      <div class="textIcon">experience</div>
+    </div>
+    <div class="contentIcon skills">
+      <div class="iconProfileBack" [ngStyle]="{'background-image':'url('+iconBack+')'}"
+           (click)="viewSkill()">
+        <div class="iconProfileFace iconSkill" [ngStyle]="{'background-image':'url('+iconSkill+')'}"
+             (click)="viewSkill()">
+        </div>
+      </div>
+      <div class="textIcon">skills</div>
+    </div>
+    <div class="contentIcon traits">
+      <div class="iconProfileBack" [ngStyle]="{'background-image':'url('+iconBack+')'}"
+           (click)="viewTraits()">
+        <div class="iconProfileFace iconTraits" [ngStyle]="{'background-image':'url('+iconTraits+')'}"
+             (click)="viewTraits()">
+        </div>
+
+      </div>
+      <div class="textIcon">traits</div>
+    </div>
+  </div>
+  <div class="profileBox">
+    <ng-container [ngSwitch]="viewModeInfo">
+      <app-info class="infoBox"
+                *ngSwitchCase="'visible'"></app-info>
+    </ng-container>
+    <ng-container [ngSwitch]="viewModeEducation">
+      <app-education class="infoBox"
+                     *ngSwitchCase="'visible'"
+      ></app-education>
+    </ng-container>
+    <ng-container [ngSwitch]="viewModeExperience">
+      <app-experience class="infoBox"
+                      *ngSwitchCase="'visible'"></app-experience>
+    </ng-container>
+    <ng-container [ngSwitch]="viewModeSkill">
+      <app-skills class="infoBox"
+                  *ngSwitchCase="'visible'"></app-skills>
+    </ng-container>
+    <ng-container [ngSwitch]="viewModeTraits">
+      <app-traits class="infoBox"
+                  *ngSwitchCase="'visible'"></app-traits>
+    </ng-container>
+  </div>
+</div>
+
