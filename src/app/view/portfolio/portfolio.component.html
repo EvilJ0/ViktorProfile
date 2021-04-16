@@ -4,12 +4,34 @@
       <div class="textFolder">Portfolio</div>
     </div>
   </div>
-  <div class="dataContainer">
-    <div class="contentIcon" *ngFor=" let image of URLImages ">
+  <div class="portfolioIconContainer">
 
-      <div class="iconProfileBack" [ngStyle]="{'background-image':'url('+iconBack+')'}">
-
+    <ng-container *ngFor="let category of this.categories">
+      <div class="iconProfileBack portfolioIcon" [ngStyle]="{'background-image':'url('+iconBack+')'}"
+           (click)="selectCategory(category)">
+        <div class="portfolioIconWrap">
+          <div class="iconPortfolioFace"
+               [ngStyle]="{'background-image':'url('+urlIconsProfile[category]+')'}"></div>
+          <div class="textIcon">{{category}}</div>
+        </div>
       </div>
-    </div>
+    </ng-container>
+
+  </div>
+  <div class="profileBox R">
+
+      <ng-container *ngFor="let content of this.category" >
+
+        <div class="categoryContent" [ngStyle]="{'background-image':'url('+content+')'}"
+             (click)="contentClicked(content)"></div>
+      </ng-container>
+    <ng-container [ngSwitch]="viewBigWindow">
+      <div class="bigContent"
+           *ngSwitchCase="'visible'"
+           [ngStyle]="{'background-image':'url('+this.bigContent+')'}"
+      (click)="closeBigWindow()">
+      </div>
+    </ng-container>
+
   </div>
 </div>
