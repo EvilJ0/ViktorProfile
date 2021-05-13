@@ -6,9 +6,9 @@ export const PortfolioIconImages = {
   icons       : '../../../../assets/svg/14_church.svg',
   logo        : '../../../../assets/svg/15_logo.svg',
   offset      : '../../../../assets/svg/16_offset.svg',
-  oracal      : '',
-  signBoard   : '',
-  wallStickers: '',
+  oracal      : '../../../../assets/png/17_oracal.png',
+  signBoard   : '../../../../assets/svg/18_signBoard.svg',
+  wallStickers: '../../../../assets/png/19_wall.png',
 };
 export const Images = {
   banner      : [
